@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b129590-bdd1-4d8e-ab7e-c7898f774bd6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/single/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/single/main.go" afterDir="false" />
     </list>
@@ -17,10 +16,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/single/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
-              <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+            <state relative-caret-position="88">
+              <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
               <folding>
                 <element signature="e#14#49#0" expanded="true" />
+                <element signature="n#!!block;n#determineEncoding#0" />
               </folding>
             </state>
           </provider>
@@ -47,10 +47,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="231" />
-    <option name="y" value="59" />
+    <option name="x" value="206" />
+    <option name="y" value="23" />
     <option name="width" value="1226" />
-    <option name="height" value="766" />
+    <option name="height" value="798" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -117,7 +117,7 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="231" y="59" width="1226" height="766" extended-state="0" />
+    <frame x="206" y="23" width="1226" height="798" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -130,7 +130,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30547112" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.357971" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -145,12 +145,20 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file:///usr/local/go/src/regexp/regexp.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="1132" column="18" selection-start-line="1132" selection-start-column="18" selection-end-line="1132" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/single/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        <state relative-caret-position="88">
+          <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
           <folding>
             <element signature="e#14#49#0" expanded="true" />
+            <element signature="n#!!block;n#determineEncoding#0" />
           </folding>
         </state>
       </provider>

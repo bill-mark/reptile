@@ -9,6 +9,7 @@ import (
 	"io"
 	"io/ioutil"
 	"net/http"
+	"regexp"
 )
 
 func main(){
@@ -30,8 +31,8 @@ func main(){
   if err != nil {
 	panic(err)
   }
-  fmt.Printf("%s\n",all)
-
+  //fmt.Printf("%s\n",all)
+  printCityList(all)
 }
 
 func determineEncoding(r io.Reader) encoding2.Encoding {
@@ -41,4 +42,17 @@ func determineEncoding(r io.Reader) encoding2.Encoding {
 	}
 	e,_,_ := charset.DetermineEncoding(bytes,"")
 	return e
+}
+
+func printCityList(contents []byte){
+   re := regexp.MustCompile(`<a href="(http://www.zhenai.com/zhenghun/[0-9a-z]+)"[^>]*>([^<]+)</a>`)
+   matches := re.FindAllSubmatch(contents,-1)
+   for _,m := range matches{
+   	//  for _,subMatch := range m{
+		//  fmt.Printf("%s",subMatch)
+	  //}
+	  fmt.Printf("city: %s,url: %s\n",m[2],m[1])
+   	  fmt.Println()
+   }
+   fmt.Printf("matches found: %d\n",len(matches))
 }
