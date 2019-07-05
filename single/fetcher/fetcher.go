@@ -1,4 +1,4 @@
-package facher
+package fetcher
 
 import (
 	"bufio"
@@ -28,11 +28,6 @@ func Fetch(url string) ([]byte,error){
 
 	e := determineEncoding(resp.Body)
 	utf8Reader :=  transform.NewReader(resp.Body,e.NewDecoder())
-
-	//all,err := ioutil.ReadAll(utf8Reader)
-	//if err != nil {
-	//	panic(err)
-	//}
 	return ioutil.ReadAll(utf8Reader)
 }
 
