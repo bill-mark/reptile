@@ -27,12 +27,12 @@ func main(){
    e := determineEncoding(resp.Body)
    utf8Reader :=  transform.NewReader(resp.Body,e.NewDecoder())
 
-  all,err := ioutil.ReadAll(utf8Reader)
-  if err != nil {
+	all,err := ioutil.ReadAll(utf8Reader)
+	if err != nil {
 	panic(err)
-  }
-  //fmt.Printf("%s\n",all)
-  printCityList(all)
+	}
+	//fmt.Printf("%s\n",all)
+	printCityList(all)
 }
 
 func determineEncoding(r io.Reader) encoding2.Encoding {
