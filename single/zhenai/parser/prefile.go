@@ -10,8 +10,9 @@ import (
 var ageRe =regexp.MustCompile(`<td><span>年龄</span></td>`)
 var marriageRe =regexp.MustCompile(`婚况`)
 
-func ParseProfile(contents []byte)engine.ParseResult{
+func ParseProfile(contents []byte,name string)engine.ParseResult{
 	profile := model.Profile{}
+	profile.Name = name
 
 	age,err := strconv.Atoi(extractString(contents,ageRe))  //atoi 将字符串转换为int类型
 	if err != nil{
