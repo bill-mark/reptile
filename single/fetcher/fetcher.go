@@ -13,14 +13,13 @@ import (
 )
 
 func Fetch(url string) ([]byte,error){
-	resp,err := http.Get(url)
-	if err != nil{
-		return nil,err
-	}
+	request, _:=http.NewRequest(http.MethodGet,url,nil)
+	request.Header.Add("User-Agent","Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1")
+
+	resp,_:=http.DefaultClient.Do(request)
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK{
-		//fmt.Println("error:status code",resp.StatusCode)
 		return nil,
 		fmt.Errorf("wrong status code: %d",resp.StatusCode)
 	}
@@ -35,7 +34,7 @@ func determineEncoding(r *bufio.Reader) encoding2.Encoding {  //获得网站编�
 	bytes,err := r.Peek(1024)
 	if err != nil{
 		//panic(err)
-		log.Printf("Fetcher error : %v",err)
+		log.Printf("Fetcher error 9999 : %v",err)
 		return unicode.UTF8
 	}
 	e,_,_ := charset.DetermineEncoding(bytes,"")
